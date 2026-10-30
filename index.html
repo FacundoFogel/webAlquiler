@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler de Livings para Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="logo">Living<span>Dany</span></div>
+        <nav>
+            <ul class="social-icons">
+                <li><a href="https://www.instagram.com/living.dany.9?utm_source=qr&mdxt=MWZvOTNxbTRxZGtkdw==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/share/1NQ6mpqQWw/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://wa.me/5491540332910?text=Hola,%20me%20gustaría%20consultar%20por%20una%20cotización%20para%20mi%20evento." target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO / INICIO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Alquiler de Livings para Eventos</h1>
+            <p>La mejor ambientación y comodidad para tus fiestas, cumpleaños y reuniones.</p>
+        </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" class="section container">
+        <h2 class="section-title">Quiénes Somos</h2>
+        <div class="about-content">
+            <p>Somos una empresa con más de 10 años de trayectoria dedicada a brindar soluciones de confort y estilo para todo tipo de eventos. Contamos con mobiliario de alta calidad, en perfecto estado de conservación e higiene para que tu celebración sea inolvidable.</p>
+            <p>Nos encargamos del traslado, armado y desarmado para que vos solo te preocupes por disfrutar.</p>
+        </div>
+    </section>
+
+     <!-- CARRUSEL DE GALERÍA -->
+    <section id="galeria" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Galería de Eventos</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="img/Carrusel/combo1-11.jfif" class="carousel-img active" alt="Evento 1">
+                    <img src="img/Carrusel/combo1-13.jfif" class="carousel-img" alt="Evento 2">
+                    <img src="img/Carrusel/combo1-6.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/combo1-7.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/combo2-1.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/combo2-3.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/combo2-5.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/combo3-4.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/combo3-5.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/ComboNiños-2.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Carrusel/ComboNiños-6.jfif" class="carousel-img" alt="Evento 3">
+                </div>
+                <button class="prev-btn" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS DE ALQUILER -->
+    <section id="combos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Nuestros Combos</h2>
+            <p class="section-subtitle">Elegí la opción que mejor se adapte a tu evento</p>
+            <p class="section-subtitle"><i>(Los precios de los combos <u>NO</u> incluyen el valor del envío.)</i></p>
+
+            <div class="combos-grid">
+                <!-- Tarjeta Combo 1 -->
+                <div class="combo-card">
+                    <img src="img/Combo1/combo1-14.jfif" alt="Combo 1">
+                    <div class="combo-info">
+                        <h3>Combo 1.</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> $40,000.</li>
+                            <li><i class="fas fa-check"></i> 1 Mesa puente.</li>
+                            <li><i class="fas fa-check"></i> 10 Pufs individuales.</li>
+                        </ul>
+                        
+                        <button type="button" onclick="abrirModalCombo(1, 'Combo 1')" class="btn-primary" style="margin-top: 10px; width: 100%; border: none; cursor: pointer; padding: 10px; border-radius: 8px; background-color: #38b000; color: white; font-weight: bold;">
+                            <i class="fas fa-images"></i> Ver Imágenes
+                        </button>
+
+                        <a href="https://wa.me/5491540332910?text=Hola,%20me%20gustaría%20consultar%20por%20el%20Combo%201" target="_blank" class="btn-card" style="display: block; text-align: center; margin-top: 8px;">
+                            Consultar WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Combo 2 -->
+                <div class="combo-card">
+                    <img src="img/Combo2/combo2-2.jfif" alt="Combo 2">
+                    <div class="combo-info">
+                        <h3>Combo 2.</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> $50,000.</li>
+                            <li><i class="fas fa-check"></i> 1 Mesa puente.</li>
+                            <li><i class="fas fa-check"></i> 1 Pufs doble.</li>
+                            <li><i class="fas fa-check"></i> 6 Pufs individuales.</li>
+                            <li><i class="fas fa-check"></i> 1 Sillón bicuerpo.</li>
+                        </ul>
+
+                        <button type="button" onclick="abrirModalCombo(2, 'Combo 2')" class="btn-primary" style="margin-top: 10px; width: 100%; border: none; cursor: pointer; padding: 10px; border-radius: 8px; background-color: #38b000; color: white; font-weight: bold;">
+                            <i class="fas fa-images"></i> Ver Imágenes
+                        </button>
+
+                        <a href="https://wa.me/5491540332910?text=Hola,%20me%20gustaría%20consultar%20por%20el%20Combo%202" target="_blank" class="btn-card" style="display: block; text-align: center; margin-top: 8px;">
+                            Consultar WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Combo 3 -->
+                <div class="combo-card">
+                    <img src="img/Combo3/combo3-1.jfif" alt="Combo 3">
+                    <div class="combo-info">
+                        <h3>Combo 3.</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> $65,000.</li>
+                            <li><i class="fas fa-check"></i> 1 Mesa puente.</li>
+                            <li><i class="fas fa-check"></i> 6 Pufs individuales.</li>
+                            <li><i class="fas fa-check"></i> 2 Sillónes bicuerpo.</li>
+                        </ul>
+
+                        <button type="button" onclick="abrirModalCombo(3, 'Combo 3')" class="btn-primary" style="margin-top: 10px; width: 100%; border: none; cursor: pointer; padding: 10px; border-radius: 8px; background-color: #38b000; color: white; font-weight: bold;">
+                            <i class="fas fa-images"></i> Ver Imágenes
+                        </button>
+
+                        <a href="https://wa.me/5491540332910?text=Hola,%20me%20gustaría%20consultar%20por%20el%20Combo%203" target="_blank" class="btn-card" style="display: block; text-align: center; margin-top: 8px;">
+                            Consultar WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Combo PersonalizadoNiños / 4ta Tarjeta -->
+                <div class="combo-card highlight">
+                    <img src="img/ComboNiños/ComboNiños-1.jfif" alt="Combo Personalizado">
+                    <div class="combo-info">
+                        <h3>Combo para Niños.</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> $45,000.</li>
+                            <li><i class="fas fa-check"></i> 2 Mesas Puentes.</li>
+                            <li><i class="fas fa-check"></i> 12 Mini pufs de colores surtidos.</li>
+                        </ul>
+
+                        <button type="button" onclick="abrirModalCombo(4, 'Combo para Niños')" class="btn-primary" style="margin-top: 10px; width: 100%; border: none; cursor: pointer; padding: 10px; border-radius: 8px; background-color: #38b000; color: white; font-weight: bold;">
+                            <i class="fas fa-images"></i> Ver Imágenes
+                        </button>
+
+                        <a href="https://wa.me/5491540332910?text=Hola,%20me%20gustaría%20consultar%20por%20el%20Combo%20para%20Niños" target="_blank" class="btn-card btn-highlight" style="display: block; text-align: center; margin-top: 8px;">
+                            Consultar WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALQUILER INDIVIDUAL -->
+    <section id="individuales" class="section container">
+        <h2 class="section-title">Alquiler Individual</h2>
+        <p class="section-subtitle">Añadí elementos adicionales a tu pedido</p>
+        
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=400&q=80" alt="Puf Individual">
+                <h4>Puf Individual</h4>
+            </div>
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1580481072645-022f9a6d8310?auto=format&fit=crop&w=400&q=80" alt="Puf Doble">
+                <h4>Puf Doble / Banqueta</h4>
+            </div>
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=400&q=80" alt="Sillón con Respaldo">
+                <h4>Sillón con Respaldo</h4>
+            </div>
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=400&q=80" alt="Mesa Puente">
+                <h4>Mesa Puente</h4>
+            </div>
+            <div class="item-card">
+                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Mini Puf Infantil">
+                <h4>Mini Puf Infantil</h4>
+            </div>
+        </div>
+    </section>
+
+   <!-- CONTACTO Y UBICACIÓN -->
+    <section id="contacto" class="section container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: stretch;">
+            
+            <div style="display: flex; flex-direction: column; gap: 30px;">
+                <div class="contact-info" style="background: #f4fbf0; border: 1px solid rgba(112, 224, 0, 0.3); padding: 35px; border-radius: 16px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);">
+                    <h3 style="font-family: 'Montserrat', sans-serif; color: #38b000; margin-bottom: 20px; font-size: 1.4rem;">¡Hacé tu reserva!</h3>
+                    <p style="margin-bottom: 12px; color: #222;"><i class="fas fa-map-marker-alt" style="color: #38b000; margin-right: 8px;"></i> Zona de Cobertura: Buenos Aires y alrededores</p>
+                    <p style="margin-bottom: 12px; color: #222;"><i class="fab fa-whatsapp" style="color: #38b000; margin-right: 8px;"></i> WhatsApp: +54 9 15 4033-2910</p>
+                    <p style="margin-bottom: 12px; color: #222;"><i class="fas fa-envelope" style="color: #38b000; margin-right: 8px;"></i> Email: livingdany@gmail.com</p>
+                    <p style="margin-bottom: 12px; color: #222;"><i class="fab fa-instagram" style="color: #38b000; margin-right: 8px;"></i> Instagram: @living.dany.9</p>
+                </div>
+
+                <div class="contact-map-card" style="background: #f4fbf0; border: 1px solid rgba(112, 224, 0, 0.3); padding: 25px; border-radius: 16px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; flex: 1;">
+                    <h3 style="font-family: 'Montserrat', sans-serif; color: #38b000; margin-bottom: 15px; font-size: 1.3rem;">Nuestra Ubicación</h3>
+                    <div style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(112, 224, 0, 0.2); flex: 1; min-height: 200px;">
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=-34.504875,-58.511946&z=15&output=embed" style="border:0; display: block;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card" style="background: #f4fbf0; border: 1px solid rgba(112, 224, 0, 0.3); padding: 35px; border-radius: 16px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; box-sizing: border-box;">
+                <h3 style="font-family: 'Montserrat', sans-serif; color: #38b000; margin-bottom: 20px; font-size: 1.4rem;"><i class="fas fa-paper-plane"></i> Dejanos tu consulta</h3>
+                
+                <form action="https://formspree.io/f/livingdany@gmail.com" method="POST" style="display: flex; flex-direction: column; flex: 1; gap: 15px;">
+                    <div style="display: flex; flex-direction: column; text-align: left;">
+                        <label for="nombre" style="font-size: 0.95rem; font-weight: 600; color: #222; margin-bottom: 6px;">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellido" style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; background-color: #fff; box-sizing: border-box;">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; text-align: left;">
+                        <label for="email" style="font-size: 0.95rem; font-weight: 600; color: #222; margin-bottom: 6px;">Email</label>
+                        <input type="email" id="email" name="_replyto" required placeholder="tuemail@ejemplo.com" style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; background-color: #fff; box-sizing: border-box;">
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; text-align: left; flex: 1;">
+                        <label for="comentario" style="font-size: 0.95rem; font-weight: 600; color: #222; margin-bottom: 6px;">Comentario</label>
+                        <textarea id="comentario" name="comentario" required placeholder="Escribí acá tus dudas o consultas sobre el evento..." style="width: 100%; height: 180px; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; background-color: #fff; box-sizing: border-box; resize: none;"></textarea>
+                    </div>
+
+                    <input type="hidden" name="_subject" value="Nueva consulta desde la web Bosque Livings">
+
+                    <button type="submit" style="width: 100%; margin-top: 5px; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; padding: 14px; background-color: #38b000; color: white; font-weight: bold; border-radius: 8px; transition: background 0.3s ease;">
+                        <i class="fas fa-paper-plane"></i> Enviar Consulta
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Alquiler de Livings. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/5491540332910?text=Hola,%20me%20gustaría%20consultar%20por%20una%20cotización%20para%20mi%20evento." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT CARRUSEL Y SCROLL -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+        
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide(currentSlide);
+        }
+        
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+    </script>
+
+    <!-- MODAL DE VISTA PREVIA CON CARRUSEL -->
+    <div id="combo-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="cerrarModal()">&times;</button>
+            <h3 id="modal-titulo" class="modal-title">Combo</h3>
+            
+            <div class="modal-carousel">
+                <button class="carousel-btn prev-btn" onclick="cambiarImagenModal(-1)">&#10094;</button>
+                <div class="carousel-image-container">
+                    <img id="modal-img" src="" alt="Vista previa">
+                </div>
+                <button class="carousel-btn next-btn" onclick="cambiarImagenModal(1)">&#10095;</button>
+            </div>
+            <p id="modal-indicator" class="modal-indicator" style="margin-top: 10px; font-weight: bold; color: #555;"></p>
+        </div>
+    </div>
+
+    <script>
+        // Galerías de fotos independientes para cada tarjeta de combo (.jfif)
+        const galeriasCombos = {
+            1: [
+                "img/Combo1/combo1-1.jfif",
+                "img/Combo1/combo1-2.jfif",
+                "img/Combo1/combo1-3.jfif",
+                "img/Combo1/combo1-14.jfif"
+            ],
+            2: [
+                "img/Combo2/combo2-2.jfif",
+                "img/Combo2/foto1.jfif",
+                "img/Combo2/foto2.jfif"
+            ],
+            3: [
+                "img/Combo3/combo3-1.jfif",
+                "img/Combo3/foto1.jfif"
+            ],
+            4: [
+                "img/ComboNiños/ComboNiños-1.jfif",
+                "img/ComboNiños/ComboNiños-2.jfif"
+            ]
+        };
+
+        let imagenesActuales = [];
+        let indiceActual = 0;
+
+        function abrirModalCombo(idCombo, titulo) {
+            imagenesActuales = galeriasCombos[idCombo] || ["img/Combo1/combo1-14.jfif"];
+            indiceActual = 0;
+
+            const tituloEl = document.getElementById('modal-titulo');
+            if (tituloEl) tituloEl.innerText = titulo;
+
+            const modal = document.getElementById('combo-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.add('active');
+            }
+
+            actualizarImagenModal();
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById('combo-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                modal.classList.remove('active');
+            }
+        }
+
+        function cambiarImagenModal(direccion) {
+            if (imagenesActuales.length === 0) return;
+            indiceActual += direccion;
+            if (indiceActual >= imagenesActuales.length) indiceActual = 0;
+            if (indiceActual < 0) indiceActual = imagenesActuales.length - 1;
+            actualizarImagenModal();
+        }
+
+        function actualizarImagenModal() {
+            const imgEl = document.getElementById('modal-img');
+            const indEl = document.getElementById('modal-indicator');
+            
+            if (imgEl && imagenesActuales[indiceActual]) {
+                imgEl.src = imagenesActuales[indiceActual];
+            }
+            if (indEl) {
+                indEl.innerText = `Imagen ${indiceActual + 1} de ${imagenesActuales.length}`;
+            }
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('combo-modal');
+            if (event.target === modal) {
+                cerrarModal();
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,644 @@
+/* PALETA BOSQUE VERANIEGO CON TONOS VERDE LIMA VIVO */
+:root {
+    --dark-forest: #0B2B18;    /* Verde bosque oscuro (Navbar, Hero, Footer) */
+    --lime-vivid: #70e000;     /* Verde lima vivo brillante */
+    --lime-dark: #38b000;      /* Verde lima intenso para títulos y textos */
+    --lime-soft: #f4fbf0;      /* Fondo tenue veraniego */
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --bg-light: #f3f7f3;       /* Fondo suave de secciones secundarias */
+    --white: #ffffff;
+}
+
+/* ESTILOS GENERALES Y RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 20px;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* TÍTULOS Y TEXTOS EN VERDE LIMA VIVO */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--lime-dark);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* QUIÉNES SOMOS */
+.about-content {
+    background-color: var(--lime-soft);
+    border: 1px solid rgba(112, 224, 0, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(11, 43, 24, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--white, #ffffff);
+}
+
+.navbar .logo span {
+    color: var(--lime-vivid, #70e000);
+}
+
+.navbar nav ul.social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar nav ul.social-icons li {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul.social-icons li a {
+    text-decoration: none !important;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.navbar nav ul.social-icons li a i {
+    font-size: 3rem !important;
+    color: #e0e0e0 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul.social-icons li a:hover {
+    transform: scale(1.15);
+}
+
+.navbar nav ul.social-icons li a:hover i {
+    color: var(--lime-vivid, #70e000) !important;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(11, 43, 24, 0.75), rgba(11, 43, 24, 0.85)), 
+                url('img/Combo2/combo2-2.jfif') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #1eb954;
+    transform: translateY(-2px);
+}
+
+/* COMBOS */
+.combos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.combo-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.combo-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--lime-vivid);
+}
+
+.combo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.combo-info {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.combo-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    color: var(--lime-dark);
+    font-size: 1.5rem;
+}
+
+.combo-info ul {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.combo-info ul li {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.combo-info ul li i {
+    color: var(--lime-dark);
+    margin-right: 10px;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--lime-dark), var(--dark-forest));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.btn-card:hover {
+    opacity: 0.9;
+}
+
+.combo-card.highlight {
+    border: 2px solid var(--lime-vivid);
+    box-shadow: 0 12px 30px rgba(112, 224, 0, 0.25);
+}
+
+.btn-highlight {
+    background: linear-gradient(135deg, var(--lime-vivid), var(--lime-dark));
+    color: var(--dark-forest);
+}
+
+.btn-highlight:hover {
+    opacity: 0.9;
+}
+
+/* ELEMENTOS INDIVIDUALES */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: border-color 0.3s;
+}
+
+.item-card:hover {
+    border-color: var(--lime-vivid);
+}
+
+.item-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.item-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    color: var(--lime-dark);
+}
+
+/* CARRUSEL DE GALERÍA */
+.carousel-container {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid var(--lime-vivid);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide {
+    position: relative;
+    height: 450px;
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(11, 43, 24, 0.7);
+    color: var(--lime-vivid);
+    border: 1px solid var(--lime-vivid);
+    font-size: 1.3rem;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: var(--lime-vivid);
+    color: var(--dark-forest);
+}
+
+.prev-btn { left: 15px; }
+.next-btn { right: 15px; }
+
+/* CONTACTO */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.contact-info, .contact-form-card {
+    background: var(--lime-soft, #f4fbf0);
+    border: 1px solid rgba(112, 224, 0, 0.3);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.contact-info h3, .contact-form-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--lime-dark);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--lime-dark);
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--dark-forest);
+    color: var(--lime-vivid);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   MODAL DE VISTA PREVIA Y CARRUSEL INDEPENDIENTE
+   ========================================== */
+#combo-modal {
+    display: none !important; 
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(5px) !important;
+    z-index: 999999 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+#combo-modal.active {
+    display: flex !important;
+}
+
+#combo-modal .modal-content {
+    background: #ffffff !important;
+    border: 2px solid var(--lime-vivid, #70e000) !important;
+    padding: 30px !important;
+    border-radius: 16px !important;
+    max-width: 1200px !important; /* <--- Modificá este valor a 1200px */
+    width: 95% !important;         /* <--- Modificá este valor a 95% */
+    position: relative !important;
+    text-align: center !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    animation: fadeIn 0.3s ease !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#combo-modal .modal-close {
+    position: absolute !important;
+    top: 15px !important;
+    right: 20px !important;
+    background: none !important;
+    border: none !important;
+    font-size: 2rem !important;
+    color: #333 !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+}
+
+#combo-modal .modal-title {
+    font-family: 'Montserrat', sans-serif !important;
+    color: var(--lime-dark, #38b000) !important;
+    margin-bottom: 15px !important;
+    font-size: 1.5rem !important;
+}
+
+#combo-modal .modal-carousel {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+    position: relative !important;
+}
+
+#combo-modal .carousel-image-container {
+    width: 100% !important;
+    height: 650px !important;      /* <--- Modificá este valor a 650px (el doble de alto) */
+    max-height: 75vh !important;   /* <--- Agregá esto para que no se pase del alto de la pantalla */
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#combo-modal .carousel-image-container img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+}
+
+#combo-modal .carousel-btn {
+    background: rgba(11, 43, 24, 0.8) !important;
+    color: var(--lime-vivid, #70e000) !important;
+    border: none !important;
+    font-size: 1.5rem !important;
+    padding: 10px 15px !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    transition: background 0.3s ease, transform 0.2s ease !important;
+}
+
+#combo-modal .carousel-btn:hover {
+    background: var(--lime-dark, #38b000) !important;
+    color: #fff !important;
+    transform: scale(1.1) !important;
+}
+
+#combo-modal .modal-indicator {
+    margin-top: 12px !important;
+    font-size: 0.9rem !important;
+    color: #666 !important;
+    font-weight: 600 !important;
+}
+
+/* ==========================================
+   CORRECCIÓN DE CLICS BLOQUEADOS EN ESCRITORIO
+   ========================================== */
+.combo-card {
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.combo-card button,
+.combo-card .btn-primary,
+button[onclick*="abrirModalCombo"] {
+    position: relative !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.combos-grid {
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: visible !important;
+}
+
+/* ==========================================
+   RESPONSIVE (ADAPTABLE A DISPOSITIVOS)
+   ========================================== */
+@media (max-width: 992px) {
+    .combos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        padding: 0 15px;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+        flex-direction: column;
+    }
+
+    .navbar .logo {
+        font-size: 1.6rem !important;
+    }
+
+    .navbar nav ul.social-icons {
+        gap: 15px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav ul.social-icons li {
+        margin: 5px 10px;
+    }
+
+    .navbar nav ul.social-icons li a i {
+        font-size: 2.2rem !important;
+    }
+
+    .combos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 10px;
+    }
+
+    .combo-card img {
+        height: 220px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel-slide {
+        height: 300px;
+    }
+}
