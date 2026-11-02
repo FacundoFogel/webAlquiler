@@ -61,6 +61,10 @@
                     <img src="img/Carrusel/combo3-5.jfif" class="carousel-img" alt="Evento 3">
                     <img src="img/Carrusel/ComboNiños-2.jfif" class="carousel-img" alt="Evento 3">
                     <img src="img/Carrusel/ComboNiños-6.jfif" class="carousel-img" alt="Evento 3">
+                    <img src="img/Combo1/combo1-13.jfif", class="carrousel-img" alt="Evento 3">
+                    <img src="img/Combo1/combo1-14.jfif", class="carrousel-img" alt="Evento 3">
+                    <img src="img/Combo1/combo1-16.jfif", class="carrousel-img" alt="Evento 3">
+                    <img src="img/Combo1/combo1-9.jfif" class="carrousel-img" alt="Evento 3">
                 </div>
                 <button class="prev-btn" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
                 <button class="next-btn" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
@@ -169,28 +173,29 @@
     <!-- ALQUILER INDIVIDUAL -->
     <section id="individuales" class="section container">
         <h2 class="section-title">Alquiler Individual</h2>
+        <h3 class="section-subtitle">Para alquilar elementos individuales se debe alquilar como <u>mínimo</u> un combo.</h3>
         <p class="section-subtitle">Añadí elementos adicionales a tu pedido</p>
         
         <div class="items-grid">
             <div class="item-card">
-                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=400&q=80" alt="Puf Individual">
-                <h4>Puf Individual</h4>
+                <img src="img/FotosIndividuales/puff.jfif" alt="Puf Individual">
+                <h4>Puff Individual</h4>
             </div>
             <div class="item-card">
-                <img src="https://images.unsplash.com/photo-1580481072645-022f9a6d8310?auto=format&fit=crop&w=400&q=80" alt="Puf Doble">
-                <h4>Puf Doble / Banqueta</h4>
+                <img src="img/FotosIndividuales/doble.jfif" alt="Puf Doble">
+                <h4>Puff Doble</h4>
             </div>
             <div class="item-card">
-                <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=400&q=80" alt="Sillón con Respaldo">
-                <h4>Sillón con Respaldo</h4>
+                <img src="img/FotosIndividuales/sillon.jfif" alt="Sillón con Respaldo">
+                <h4>Sillón Bicuerpo</h4>
             </div>
             <div class="item-card">
-                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=400&q=80" alt="Mesa Puente">
+                <img src="img/FotosIndividuales/mesa.jfif" alt="Mesa Puente">
                 <h4>Mesa Puente</h4>
             </div>
             <div class="item-card">
-                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Mini Puf Infantil">
-                <h4>Mini Puf Infantil</h4>
+                <img src="img/FotosIndividuales/puffNiños.jfif" alt="Mini Puf Infantil">
+                <h4>Mini Puff Infantil</h4>
             </div>
         </div>
     </section>
@@ -220,7 +225,7 @@
             <div class="contact-form-card" style="background: #f4fbf0; border: 1px solid rgba(112, 224, 0, 0.3); padding: 35px; border-radius: 16px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); display: flex; flex-direction: column; box-sizing: border-box;">
                 <h3 style="font-family: 'Montserrat', sans-serif; color: #38b000; margin-bottom: 20px; font-size: 1.4rem;"><i class="fas fa-paper-plane"></i> Dejanos tu consulta</h3>
                 
-                <form action="https://formspree.io/f/livingdany@gmail.com" method="POST" style="display: flex; flex-direction: column; flex: 1; gap: 15px;">
+                <form action="https://formspree.io/f/xeaapzkd" method="POST" style="display: flex; flex-direction: column; flex: 1; gap: 15px;">
                     <div style="display: flex; flex-direction: column; text-align: left;">
                         <label for="nombre" style="font-size: 0.95rem; font-weight: 600; color: #222; margin-bottom: 6px;">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre y apellido" style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Poppins', sans-serif; font-size: 0.95rem; background-color: #fff; box-sizing: border-box;">
@@ -246,9 +251,21 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Alquiler de Livings. Todos los derechos reservados.</p>
+   <!-- FOOTER -->
+    <footer style="background-color: var(--dark-forest); padding: 25px 20px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+            
+            <!-- Texto de Copyright -->
+            <p style="color: var(--lime-vivid); font-size: 0.95rem; margin: 0;">
+                &copy; 2026 Alquiler de Livings. Todos los derechos reservados.
+            </p>
+
+            <!-- Contador de Visitas Centrado -->
+            <div style="color: var(--lime-vivid); font-size: 0.9rem; font-weight: 600;">
+                <i class="fas fa-users" style="margin-right: 6px;"></i> Personas que visitaron la web: <span id="contador">Cargando...</span>
+            </div>
+
+        </div>
     </footer>
 
     <!-- Botón flotante WhatsApp -->
@@ -307,23 +324,52 @@
         // Galerías de fotos independientes para cada tarjeta de combo (.jfif)
         const galeriasCombos = {
             1: [
-                "img/Combo1/combo1-1.jfif",
+                "img/Combo1/combo1-15.jfif",
                 "img/Combo1/combo1-2.jfif",
                 "img/Combo1/combo1-3.jfif",
-                "img/Combo1/combo1-14.jfif"
+                "img/Combo1/combo1-4.jfif",
+                "img/Combo1/combo1-1.jfif",
+                "img/Combo1/combo1-5.jfif",
+                "img/Combo1/combo1-18.jfif",
+                "img/Combo1/combo1-6.jfif",
+                "img/Combo1/combo1-7.jfif",
+                "img/Combo1/combo1-8.jfif",
+                "img/Combo1/combo1-17.jfif",
+                "img/Combo1/combo1-10.jfif",
+                "img/Combo1/combo1-11.jfif",
+                "img/Combo1/combo1-12.jfif",
+                "img/Combo1/combo1-13.jfif",
+                "img/Combo1/combo1-14.jfif",
+                "img/Combo1/combo1-16.jfif",
+                "img/Combo1/combo1-9.jfif"
             ],
             2: [
+                "img/Combo2/combo2-1.jfif",
                 "img/Combo2/combo2-2.jfif",
-                "img/Combo2/foto1.jfif",
-                "img/Combo2/foto2.jfif"
+                "img/Combo2/combo2-3.jfif",
+                "img/Combo2/combo2-4.jfif",
+                "img/Combo2/combo2-5.jfif",
+                "img/Combo2/combo2-6.jfif",
+                "img/Combo2/combo2-7.jfif",
+                "img/Combo2/combo2-8.jfif",
+                "img/Combo2/combo2-9.jfif",
+                "img/Combo2/combo2-10.jfif"
             ],
             3: [
                 "img/Combo3/combo3-1.jfif",
-                "img/Combo3/foto1.jfif"
+                "img/Combo3/combo3-2.jfif",
+                "img/Combo3/combo3-3.jfif",
+                "img/Combo3/combo3-5.jfif",
+                "img/Combo3/combo3-6.jfif",
+                "img/Combo3/combo3-4.jfif"
             ],
             4: [
                 "img/ComboNiños/ComboNiños-1.jfif",
-                "img/ComboNiños/ComboNiños-2.jfif"
+                "img/ComboNiños/ComboNiños-3.jfif",
+                "img/ComboNiños/ComboNiños-4.jfif",
+                "img/ComboNiños/ComboNiños-2.jfif",
+                "img/ComboNiños/ComboNiños-5.jfif",
+                "img/ComboNiños/ComboNiños-6.jfif"
             ]
         };
 
@@ -380,6 +426,32 @@
                 cerrarModal();
             }
         };
+        </script>
+        <script>
+    (function actualizarContador() {
+        // 1. Número base inicial para la web
+        const VISITAS_BASE = 124;
+
+        // 2. Leemos las visitas guardadas en el navegador
+        let visitasLocal = localStorage.getItem('livingdany_visitas');
+
+        if (!visitasLocal) {
+            // Si es la primera vez que entra este usuario, inicializamos
+            visitasLocal = VISITAS_BASE;
+        } else {
+            // Si ya entró antes, le sumamos 1 a su sesión
+            visitasLocal = parseInt(visitasLocal) + 1;
+        }
+
+        // 3. Guardamos el nuevo valor
+        localStorage.setItem('livingdany_visitas', visitasLocal);
+
+        // 4. Inyectamos directamente el número en el HTML
+        const contadorEl = document.getElementById('contador');
+        if (contadorEl) {
+            contadorEl.innerText = visitasLocal;
+        }
+    })();
     </script>
 </body>
 </html>
